@@ -87,6 +87,7 @@ def load_img(fname, color_mode='rgb', target_size=None, interpolation=cv2.INTER_
             
     elif color_mode == "gray":
         img = cv2.imread(fname, 0)
+        img = np.expand_dims(img, axis=2)
         
     else:
         img = cv2.imread(fname)
